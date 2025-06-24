@@ -1,0 +1,5 @@
+# send_slack.py
+import requests
+
+message = {"text": "Deployment completed successfully!"}
+requests.post('https://hooks.slack.com/services/your/webhook/url', json=message)
