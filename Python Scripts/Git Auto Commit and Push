@@ -1,0 +1,6 @@
+# auto_git_push.py
+import os
+
+os.system('git add .')
+os.system('git commit -m "Auto-commit via script"')
+os.system('git push origin main')
