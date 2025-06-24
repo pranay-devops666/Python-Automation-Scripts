@@ -1,6 +1,0 @@
-# trigger_jenkins_build.py
-import requests
-
-JENKINS_URL = 'http://jenkins.local:8080/job/my-job/build'
-response = requests.post(JENKINS_URL, auth=('admin', 'api_token'))
-print("Triggered build:", response.status_code)
