@@ -1,0 +1,17 @@
+# update_nginx_conf.py
+import os
+
+conf = """
+server {
+    listen 80;
+    server_name example.com;
+    location / {
+        proxy_pass http://localhost:5000;
+    }
+}
+"""
+
+with open('/etc/nginx/sites-available/example', 'w') as f:
+    f.write(conf)
+
+os.system('nginx -s reload')
