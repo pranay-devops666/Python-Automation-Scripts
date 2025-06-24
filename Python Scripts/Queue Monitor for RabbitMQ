@@ -1,0 +1,6 @@
+# rabbitmq_queue.py
+import requests
+
+r = requests.get('http://localhost:15672/api/queues', auth=('guest', 'guest'))
+for queue in r.json():
+    print(queue['name'], queue['messages'])
