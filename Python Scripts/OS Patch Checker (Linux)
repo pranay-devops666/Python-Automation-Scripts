@@ -1,0 +1,4 @@
+# check_patches.py
+import os
+
+os.system('apt list --upgradable')
