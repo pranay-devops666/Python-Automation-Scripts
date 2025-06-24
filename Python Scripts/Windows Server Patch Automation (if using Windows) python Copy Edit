@@ -1,0 +1,5 @@
+# check_windows_updates.py
+import subprocess
+
+updates = subprocess.check_output(['powershell', '-Command', 'Get-WindowsUpdate'])
+print(updates.decode())
