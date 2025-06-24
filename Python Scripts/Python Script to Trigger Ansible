@@ -1,0 +1,4 @@
+# run_ansible.py
+import os
+
+os.system('ansible-playbook -i inventory.ini deploy.yml')
