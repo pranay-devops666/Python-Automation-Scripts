@@ -1,0 +1,7 @@
+# rotate_logs.py
+import os
+
+log_dir = '/var/log/myapp'
+for file in os.listdir(log_dir):
+    if file.endswith('.log'):
+        os.rename(f"{log_dir}/{file}", f"{log_dir}/{file}.1")
