@@ -1,0 +1,6 @@
+# jenkins_job_status.py
+import requests
+
+url = 'http://jenkins.local:8080/job/my-job/lastBuild/api/json'
+r = requests.get(url, auth=('admin', 'api_token'))
+print("Job status:", r.json()['result'])
