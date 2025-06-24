@@ -1,0 +1,8 @@
+# backup_files.py
+import shutil
+import datetime
+
+src = '/var/log'
+dst = f'/backup/logs_{datetime.datetime.now().strftime("%Y%m%d")}'
+shutil.make_archive(dst, 'zip', src)
+print(f"Backup saved at {dst}.zip")
