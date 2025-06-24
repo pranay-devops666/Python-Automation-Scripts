@@ -1,0 +1,8 @@
+# modify_xml.py
+import xml.etree.ElementTree as ET
+
+tree = ET.parse('server.xml')
+root = tree.getroot()
+for elem in root.iter('Connector'):
+    elem.set('port', '8081')
+tree.write('server_modified.xml')
