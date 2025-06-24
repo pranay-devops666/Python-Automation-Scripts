@@ -1,0 +1,6 @@
+# parse_yaml.py
+import yaml
+
+with open('pipeline.yml') as f:
+    data = yaml.safe_load(f)
+print(data)
