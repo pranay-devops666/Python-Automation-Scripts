@@ -1,0 +1,6 @@
+# check_versions.py
+import os
+
+tools = ['python3', 'git', 'docker', 'terraform']
+for tool in tools:
+    os.system(f'{tool} --version')
