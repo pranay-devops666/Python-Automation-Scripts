@@ -1,0 +1,6 @@
+# push_metrics.py
+import requests
+
+data = 'my_metric 42\n'
+r = requests.post('http://localhost:9091/metrics/job/myjob', data=data)
+print("Pushed metrics:", r.status_code)
