@@ -1,0 +1,5 @@
+# monitor_logs.py
+with open('/var/log/syslog') as f:
+    errors = [line for line in f if 'ERROR' in line]
+    if errors:
+        print("Errors Found:", errors)
