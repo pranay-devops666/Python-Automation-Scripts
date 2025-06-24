@@ -1,0 +1,11 @@
+# watch_and_deploy.py
+import time
+import os
+
+last_mtime = os.path.getmtime('app.py')
+while True:
+    time.sleep(5)
+    current = os.path.getmtime('app.py')
+    if current != last_mtime:
+        os.system('python3 deploy.py')
+        last_mtime = current
