@@ -1,0 +1,5 @@
+# build_docker_image.py
+import os
+
+os.system('docker build -t myapp:latest .')
+os.system('docker push myrepo/myapp:latest')
