@@ -1,0 +1,8 @@
+# infra_status.py
+import boto3
+
+ec2 = boto3.client('ec2')
+instances = ec2.describe_instances()
+for r in instances['Reservations']:
+    for i in r['Instances']:
+        print(f"{i['InstanceId']} - {i['State']['Name']}")
