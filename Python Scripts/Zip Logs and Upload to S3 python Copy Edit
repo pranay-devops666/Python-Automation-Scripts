@@ -1,0 +1,8 @@
+# zip_and_upload.py
+import boto3, shutil
+
+shutil.make_archive('logs', 'zip', '/var/log/myapp')
+
+s3 = boto3.client('s3')
+s3.upload_file('logs.zip', 'my-s3-bucket', 'logs/logs.zip')
+print("Uploaded to S3.")
